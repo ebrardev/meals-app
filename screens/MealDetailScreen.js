@@ -22,6 +22,7 @@ function MealDetailScreen({route,navigation}) {
             return <IconButton
              onPress={headerButtonPress}
               icon="fav" 
+              
               color="#06c2bf" 
                />
         }
