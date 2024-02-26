@@ -4,21 +4,26 @@ import {MEALS} from '../data/dummy-data'
 import MealDetails from "../components/MealDetails";
 import Subtitle from "../components/MealDetail/Subtitle";
 import List from "../components/MealDetail/List";
-import { useNavigation } from "@react-navigation/native";
+import IconButton from "../components/IconButton";
 
-function MealDetailScreen({route}) {
+
+function MealDetailScreen({route,navigation}) {
     const mealId = route.params.mealId
   const selectedMeal =  MEALS.find((meal)=> meal.id === mealId)
 
   function headerButtonPress () {
     console.log("Fav button pressed")
   }
-    const navigation = useNavigation()
+  
 
   useLayoutEffect(()=>{
     navigation.setOptions({
         headerRight: () => {
-            return <Button title="Fav" onPress={headerButtonPress} />
+            return <IconButton
+             onPress={headerButtonPress}
+              icon="fav" 
+              color="#06c2bf" 
+               />
         }
     })
     },[navigation,headerButtonPress])
