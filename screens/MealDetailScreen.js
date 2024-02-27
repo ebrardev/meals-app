@@ -21,7 +21,7 @@ function MealDetailScreen({route,navigation}) {
         headerRight: () => {
             return <IconButton
              onPress={headerButtonPress}
-              icon="fav" 
+              icon="favorite" 
               
               color="#06c2bf" 
                />

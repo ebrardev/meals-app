@@ -1,3 +1,4 @@
+// ? This component is used to display the list of ingredients and steps in the meal detail screen.
 import { Text,View ,StyleSheet} from "react-native";
 
 function List ({data}) {
@@ -6,8 +7,9 @@ function List ({data}) {
         <Text style={styles.itemText}>{dataPoint}</Text>
         </View>
     ))
-
 }
+
+// * Styling the component
 export default List;
 
 const styles = StyleSheet.create({
@@ -26,3 +28,4 @@ const styles = StyleSheet.create({
         textAlign:'center',
     }
 })
+//! End of List.js
