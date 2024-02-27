@@ -5,7 +5,9 @@ import MealsOverviewScreen from './screens/MealsOverviewScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MealDetailScreen from './screens/MealDetailScreen';
+import { Provider } from 'react-redux';
 
+import store from './store/store';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -13,6 +15,11 @@ export default function App() {
   return (
     <>
     <StatusBar style="dark" />
+
+
+    <Provider store={store}>
+
+    
     <NavigationContainer>
       <Stack.Navigator
       screenOptions={{
@@ -45,6 +52,7 @@ export default function App() {
        
       </Stack.Navigator>
     </NavigationContainer>
+    </Provider>
     </>
 
   );
